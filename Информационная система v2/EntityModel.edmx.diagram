@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ba8143054b6d430888a03b75d43ac518" Name="Diagram1" ZoomLevel="73" >
+        <EntityTypeShape EntityType="EntityModel.Doctor" Width="1.5" PointX="3" PointY="0.5" />
+        <EntityTypeShape EntityType="EntityModel.Patient" Width="1.5" PointX="5.375" PointY="3.375" />
+        <EntityTypeShape EntityType="EntityModel.Administrator" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="EntityModel.Device" Width="1.5" PointX="8.125" PointY="4.375" />
+        <EntityTypeShape EntityType="EntityModel.HealthStatus" Width="1.5" PointX="5.375" PointY="0.5" />
+        <EntityTypeShape EntityType="EntityModel.MeasuredData" Width="1.5" PointX="7.875" PointY="0.5" />
+        <AssociationConnector Association="EntityModel.PatientDevice" />
+        <AssociationConnector Association="EntityModel.DoctorPatient" />
+        <EntityTypeShape EntityType="EntityModel.DoctorMessage" Width="1.5" PointX="3" PointY="3.75" />
+        <AssociationConnector Association="EntityModel.PatientHealthStatus" />
+        <AssociationConnector Association="EntityModel.PatientMeasuredData" />
+        <EntityTypeShape EntityType="EntityModel.DeviceMessage" Width="1.5" PointX="0.5" PointY="3.375" />
+        <AssociationConnector Association="EntityModel.AdministratorMessage" />
+        <AssociationConnector Association="EntityModel.AdministratorDeviceMessage" />
+        <AssociationConnector Association="EntityModel.DeviceMessageDevice" />
+        <AssociationConnector Association="EntityModel.DoctorDoctorMessage" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

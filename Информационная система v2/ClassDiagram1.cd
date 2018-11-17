@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Информационная_система_v2.AddDeviceForm" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAADgCAAABACAgCAAIACCAAAAAAAAAAEAQAAAAA=</HashCode>
+      <FileName>AddDeviceForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.AdministratorForm" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIACAgAAACAFSAACACQCAABEAAACICAUgAAwI=</HashCode>
+      <FileName>AdministratorForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.DoctorForm" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMAUAoAQIGQCAAAAAQCBQCMCwACIQQAAACAIEUEAAQA=</HashCode>
+      <FileName>DoctorForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.EntityModelContainer" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIBAAAIAAUAgAAAAAAAgQBAAAAAA=</HashCode>
+      <FileName>EntityModel.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.Administrator" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAIAAAAAAAAAAAAAAAAACAAAQIAAEAAA=</HashCode>
+      <FileName>Administrator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.Device" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAAAQAAAECAA=</HashCode>
+      <FileName>Device.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.DeviceMessage" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAkCAAAAEAAAAAAFAAAABAAAACAAAAAA=</HashCode>
+      <FileName>DeviceMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.Doctor" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAIAAAAAAAAAACAAAIAACAAAQAAACCAA=</HashCode>
+      <FileName>Doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.DoctorMessage" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAECAAAAEAAAAAAFAAAQBAAAACAAAAAA=</HashCode>
+      <FileName>DoctorMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.HealthStatus" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAgAAAEAAAgCAAAAAAAAAAAAYAAAACAA=</HashCode>
+      <FileName>HealthStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.MeasuredData" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAEAAAAAAAAAAA4AAAACAA=</HashCode>
+      <FileName>MeasuredData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Информационная_система_v2.Patient">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAABBAAAAoAAAAAAAAQAACAAAAQCAIAQAAIAAAA=</HashCode>
+      <FileName>Patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.ExcelWorker" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAABACAAAAAJAAAABAABAAAAAAQAACAAkAAQABAA=</HashCode>
+      <FileName>ExcelWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.HealthStatusForm" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAADASAAABgAERDQAGAGAAwAgAIAiCAAQQAAAQA=</HashCode>
+      <FileName>HealthStatusForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.InformationSystem" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CjUQCAADAAAACAggECACACIASGAAAQBAAAAIAAAAIAA=</HashCode>
+      <FileName>InformationSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.LogInForm" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAARAAAAACAAAJACAACAAAACAAAAAACCAAAQAAAAAQA=</HashCode>
+      <FileName>LogInForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.MeasureGenerator" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAEAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>MeasureGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.NewPatientForm" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAhBACCACAECDEAQACAgCACAAAAAOAYICAAwQAABQI=</HashCode>
+      <FileName>NewPatientForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.PatientComparer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAABAAAAAAAA=</HashCode>
+      <FileName>PatientComparer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Информационная_система_v2.PatientDataForm" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEoAYQECQDAgABIgAEChEKQCEAAAAAABACSKUQACCAA=</HashCode>
+      <FileName>PatientDataForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.PatientForm" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEwAYAECASBAIBEAEEGBECECEUUAAAEBACSC0QgIAUA=</HashCode>
+      <FileName>PatientForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.Program" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.ReadMessageForm" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABABAAACACCABBAAAQSCCGEChAAAAAAAACgAAAAQAAA=</HashCode>
+      <FileName>ReadMessageForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.SearchPatientForm" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIQIACIGMCAABAAACARAAKQUAAEAIAEiCAgQIgAQg=</HashCode>
+      <FileName>SearchPatientForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.User" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Информационная_система_v2.User.UserType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>User.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.Properties.Resources" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.Properties.Settings" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Информационная_система_v2.ExcelExportData" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAQAAAAgAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExcelWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Информационная_система_v2.DeviceFunction" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAABAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>DeviceFunction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Информационная_система_v2.DoctorPolyclinic" Collapsed="true">
+    <Position X="9.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>DoctorPolyclinic.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Информационная_система_v2.DoctorPost" Collapsed="true">
+    <Position X="11" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAECAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>DoctorPost.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Информационная_система_v2.Male" Collapsed="true">
+    <Position X="12.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Male.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

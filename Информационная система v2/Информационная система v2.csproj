@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC53EEF5-8A32-47FA-A27E-5705447D20A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Информационная_система_v2</RootNamespace>
+    <AssemblyName>Информационная система v2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDeviceForm.Designer.cs">
+      <DependentUpon>AddDeviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorForm.Designer.cs">
+      <DependentUpon>AdministratorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceFunction.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceMessage.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorForm.Designer.cs">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorMessage.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorPolyclinic.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorPost.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelWorker.cs" />
+    <Compile Include="HealthStatus.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HealthStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthStatusForm.Designer.cs">
+      <DependentUpon>HealthStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformationSystem.cs" />
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Male.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuredData.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MeasureGenerator.cs" />
+    <Compile Include="NewPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPatientForm.Designer.cs">
+      <DependentUpon>NewPatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientComparer.cs" />
+    <Compile Include="PatientDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientDataForm.Designer.cs">
+      <DependentUpon>PatientDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForm.Designer.cs">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadMessageForm.Designer.cs">
+      <DependentUpon>ReadMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchPatientForm.Designer.cs">
+      <DependentUpon>SearchPatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="AddDeviceForm.resx">
+      <DependentUpon>AddDeviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministratorForm.resx">
+      <DependentUpon>AdministratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorForm.resx">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthStatusForm.resx">
+      <DependentUpon>HealthStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPatientForm.resx">
+      <DependentUpon>NewPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientDataForm.resx">
+      <DependentUpon>PatientDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForm.resx">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReadMessageForm.resx">
+      <DependentUpon>ReadMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchPatientForm.resx">
+      <DependentUpon>SearchPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="EntityModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="EntityModel.edmx.diagram">
+      <DependentUpon>EntityModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntityModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntityModel.Context.cs</LastGenOutput>
+      <DependentUpon>EntityModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="EntityModel.edmx.sql" />
+    <Content Include="EntityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntityModel.cs</LastGenOutput>
+      <DependentUpon>EntityModel.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

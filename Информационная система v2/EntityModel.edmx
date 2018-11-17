@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EntityModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="EntityModelStoreContainer">
+    <EntitySet Name="DeviceSet" EntityType="EntityModel.Store.DeviceSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DoctorMessageSet" EntityType="EntityModel.Store.DoctorMessageSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DoctorSet" EntityType="EntityModel.Store.DoctorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PatientSet" EntityType="EntityModel.Store.PatientSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdministratorSet" EntityType="EntityModel.Store.AdministratorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MeasuredDataSet" EntityType="EntityModel.Store.MeasuredDataSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HealthStatusSet" EntityType="EntityModel.Store.HealthStatusSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DeviceMessageSet" EntityType="EntityModel.Store.DeviceMessageSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DoctorPatient" EntityType="EntityModel.Store.DoctorPatient" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="PatientDevice" Association="EntityModel.Store.PatientDevice">
+      <End Role="Patient" EntitySet="PatientSet" />
+      <End Role="Device" EntitySet="DeviceSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DoctorPatient_Doctor" Association="EntityModel.Store.FK_DoctorPatient_Doctor">
+      <End Role="Doctor" EntitySet="DoctorSet" />
+      <End Role="DoctorPatient" EntitySet="DoctorPatient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DoctorPatient_Patient" Association="EntityModel.Store.FK_DoctorPatient_Patient">
+      <End Role="Patient" EntitySet="PatientSet" />
+      <End Role="DoctorPatient" EntitySet="DoctorPatient" />
+    </AssociationSet>
+    <AssociationSet Name="PatientHealthStatus" Association="EntityModel.Store.PatientHealthStatus">
+      <End Role="Patient" EntitySet="PatientSet" />
+      <End Role="HealthStatus" EntitySet="HealthStatusSet" />
+    </AssociationSet>
+    <AssociationSet Name="PatientMeasuredData" Association="EntityModel.Store.PatientMeasuredData">
+      <End Role="Patient" EntitySet="PatientSet" />
+      <End Role="MeasuredData" EntitySet="MeasuredDataSet" />
+    </AssociationSet>
+    <AssociationSet Name="AdministratorMessage" Association="EntityModel.Store.AdministratorMessage">
+      <End Role="Administrator" EntitySet="AdministratorSet" />
+      <End Role="Message" EntitySet="DoctorMessageSet" />
+    </AssociationSet>
+    <AssociationSet Name="AdministratorDeviceMessage" Association="EntityModel.Store.AdministratorDeviceMessage">
+      <End Role="Administrator" EntitySet="AdministratorSet" />
+      <End Role="DeviceMessage" EntitySet="DeviceMessageSet" />
+    </AssociationSet>
+    <AssociationSet Name="DeviceMessageDevice" Association="EntityModel.Store.DeviceMessageDevice">
+      <End Role="DeviceMessage" EntitySet="DeviceMessageSet" />
+      <End Role="Device" EntitySet="DeviceSet" />
+    </AssociationSet>
+    <AssociationSet Name="DoctorDoctorMessage" Association="EntityModel.Store.DoctorDoctorMessage">
+      <End Role="Doctor" EntitySet="DoctorSet" />
+      <End Role="DoctorMessage" EntitySet="DoctorMessageSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DeviceSet">
+    <Key>
+      <PropertyRef Name="DeviceCode" />
+    </Key>
+    <Property Name="DeviceCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Function" Type="int" Nullable="false" />
+    <Property Name="OwnerCode" Type="int" Nullable="false" />
+    <Property Name="Patient_UserCode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoctorMessageSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="SenderCode" Type="int" Nullable="false" />
+    <Property Name="RecipientCode" Type="int" Nullable="false" />
+    <Property Name="Checked" Type="bit" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Administrator_UserCode" Type="int" Nullable="false" />
+    <Property Name="Doctor_UserCode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoctorSet">
+    <Key>
+      <PropertyRef Name="UserCode" />
+    </Key>
+    <Property Name="UserCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Polyclinic" Type="int" Nullable="false" />
+    <Property Name="Post" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatientSet">
+    <Key>
+      <PropertyRef Name="UserCode" />
+    </Key>
+    <Property Name="UserCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" Nullable="false" />
+    <Property Name="Male" Type="int" Nullable="false" />
+    <Property Name="Height" Type="tinyint" Nullable="false" />
+    <Property Name="Weight" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AdministratorSet">
+    <Key>
+      <PropertyRef Name="UserCode" />
+    </Key>
+    <Property Name="UserCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MeasuredDataSet">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="DeviceCode" Type="int" Nullable="false" />
+    <Property Name="Number" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatingTime" Type="datetime" Nullable="false" />
+    <Property Name="OwnerCode" Type="int" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Patient_UserCode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HealthStatusSet">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Status" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatingTime" Type="datetime" Nullable="false" />
+    <Property Name="OwnerCode" Type="int" Nullable="false" />
+    <Property Name="Patient_UserCode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeviceMessageSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="SenderCode" Type="int" Nullable="false" />
+    <Property Name="RecipientCode" Type="int" Nullable="false" />
+    <Property Name="Checked" Type="bit" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Administrator_UserCode" Type="int" Nullable="false" />
+    <Property Name="Device_DeviceCode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoctorPatient">
+    <Key>
+      <PropertyRef Name="Doctor_UserCode" />
+      <PropertyRef Name="Patient_UserCode" />
+    </Key>
+    <Property Name="Doctor_UserCode" Type="int" Nullable="false" />
+    <Property Name="Patient_UserCode" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="PatientDevice">
+    <End Role="Patient" Type="EntityModel.Store.PatientSet" Multiplicity="1" />
+    <End Role="Device" Type="EntityModel.Store.DeviceSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="Patient_UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PatientHealthStatus">
+    <End Role="Patient" Type="EntityModel.Store.PatientSet" Multiplicity="1" />
+    <End Role="HealthStatus" Type="EntityModel.Store.HealthStatusSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="HealthStatus">
+        <PropertyRef Name="Patient_UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PatientMeasuredData">
+    <End Role="Patient" Type="EntityModel.Store.PatientSet" Multiplicity="1" />
+    <End Role="MeasuredData" Type="EntityModel.Store.MeasuredDataSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="MeasuredData">
+        <PropertyRef Name="Patient_UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AdministratorMessage">
+    <End Role="Administrator" Type="EntityModel.Store.AdministratorSet" Multiplicity="1" />
+    <End Role="Message" Type="EntityModel.Store.DoctorMessageSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="Message">
+        <PropertyRef Name="Administrator_UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AdministratorDeviceMessage">
+    <End Role="Administrator" Type="EntityModel.Store.AdministratorSet" Multiplicity="1" />
+    <End Role="DeviceMessage" Type="EntityModel.Store.DeviceMessageSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="DeviceMessage">
+        <PropertyRef Name="Administrator_UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DeviceMessageDevice">
+    <End Role="DeviceMessage" Type="EntityModel.Store.DeviceMessageSet" Multiplicity="*" />
+    <End Role="Device" Type="EntityModel.Store.DeviceSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="DeviceCode" />
+      </Principal>
+      <Dependent Role="DeviceMessage">
+        <PropertyRef Name="Device_DeviceCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DoctorDoctorMessage">
+    <End Role="Doctor" Type="EntityModel.Store.DoctorSet" Multiplicity="1" />
+    <End Role="DoctorMessage" Type="EntityModel.Store.DoctorMessageSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="DoctorMessage">
+        <PropertyRef Name="Doctor_UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DoctorPatient_Doctor">
+    <End Role="Doctor" Type="EntityModel.Store.DoctorSet" Multiplicity="1" />
+    <End Role="DoctorPatient" Type="EntityModel.Store.DoctorPatient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="DoctorPatient">
+        <PropertyRef Name="Doctor_UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DoctorPatient_Patient">
+    <End Role="DoctorPatient" Type="EntityModel.Store.DoctorPatient" Multiplicity="*" />
+    <End Role="Patient" Type="EntityModel.Store.PatientSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="DoctorPatient">
+        <PropertyRef Name="Patient_UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="EntityModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="EntityModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DeviceSet" EntityType="EntityModel.Device" />
+          <AssociationSet Name="PatientDevice" Association="EntityModel.PatientDevice">
+            <End Role="Patient" EntitySet="PatientSet" />
+            <End Role="Device" EntitySet="DeviceSet" />
+          </AssociationSet>
+          <AssociationSet Name="DoctorPatient" Association="EntityModel.DoctorPatient">
+            <End Role="Doctor" EntitySet="DoctorSet" />
+            <End Role="Patient" EntitySet="PatientSet" />
+          </AssociationSet>
+          <EntitySet Name="DoctorMessageSet" EntityType="EntityModel.DoctorMessage" />
+          <EntitySet Name="DoctorSet" EntityType="EntityModel.Doctor" />
+          <EntitySet Name="PatientSet" EntityType="EntityModel.Patient" />
+          <EntitySet Name="AdministratorSet" EntityType="EntityModel.Administrator" />
+          <EntitySet Name="MeasuredDataSet" EntityType="EntityModel.MeasuredData" />
+          <EntitySet Name="HealthStatusSet" EntityType="EntityModel.HealthStatus" />
+          <AssociationSet Name="PatientHealthStatus" Association="EntityModel.PatientHealthStatus">
+            <End Role="Patient" EntitySet="PatientSet" />
+            <End Role="HealthStatus" EntitySet="HealthStatusSet" />
+          </AssociationSet>
+          <AssociationSet Name="PatientMeasuredData" Association="EntityModel.PatientMeasuredData">
+            <End Role="Patient" EntitySet="PatientSet" />
+            <End Role="MeasuredData" EntitySet="MeasuredDataSet" />
+          </AssociationSet>
+          <EntitySet Name="DeviceMessageSet" EntityType="EntityModel.DeviceMessage" />
+          <AssociationSet Name="AdministratorMessage" Association="EntityModel.AdministratorMessage">
+            <End Role="Administrator" EntitySet="AdministratorSet" />
+            <End Role="Message" EntitySet="DoctorMessageSet" />
+          </AssociationSet>
+          <AssociationSet Name="AdministratorDeviceMessage" Association="EntityModel.AdministratorDeviceMessage">
+            <End Role="Administrator" EntitySet="AdministratorSet" />
+            <End Role="DeviceMessage" EntitySet="DeviceMessageSet" />
+          </AssociationSet>
+          <AssociationSet Name="DeviceMessageDevice" Association="EntityModel.DeviceMessageDevice">
+            <End Role="DeviceMessage" EntitySet="DeviceMessageSet" />
+            <End Role="Device" EntitySet="DeviceSet" />
+          </AssociationSet>
+          <AssociationSet Name="DoctorDoctorMessage" Association="EntityModel.DoctorDoctorMessage">
+            <End Role="Doctor" EntitySet="DoctorSet" />
+            <End Role="DoctorMessage" EntitySet="DoctorMessageSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Doctor">
+          <Key>
+            <PropertyRef Name="UserCode" />
+          </Key>
+          <NavigationProperty Name="Patient" Relationship="EntityModel.DoctorPatient" FromRole="Doctor" ToRole="Patient" />
+          <Property Name="UserCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" Nullable="false" />
+          <Property Name="Login" Type="String" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" />
+          <NavigationProperty Name="DoctorMessage" Relationship="EntityModel.DoctorDoctorMessage" FromRole="Doctor" ToRole="DoctorMessage" />
+          <Property Name="Polyclinic" Type="EntityModel.DoctorPolyclinic" Nullable="false" />
+          <Property Name="Post" Type="EntityModel.DoctorPost" Nullable="false" />
+          </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="UserCode" />
+          </Key>
+          <NavigationProperty Name="Device" Relationship="EntityModel.PatientDevice" FromRole="Patient" ToRole="Device" />
+          <NavigationProperty Name="Doctor" Relationship="EntityModel.DoctorPatient" FromRole="Patient" ToRole="Doctor" />
+          <NavigationProperty Name="HealthStatus" Relationship="EntityModel.PatientHealthStatus" FromRole="Patient" ToRole="HealthStatus" />
+          <NavigationProperty Name="MeasuredData" Relationship="EntityModel.PatientMeasuredData" FromRole="Patient" ToRole="MeasuredData" />
+          <Property Name="UserCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" Nullable="false" />
+          <Property Name="Login" Type="String" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" />
+          <Property Name="Male" Type="EntityModel.Male" Nullable="false" />
+          <Property Name="Height" Type="Byte" Nullable="false" />
+          <Property Name="Weight" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Administrator">
+          <Key>
+            <PropertyRef Name="UserCode" />
+          </Key>
+          <Property Name="UserCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" Nullable="false" />
+          <Property Name="Login" Type="String" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" />
+          <NavigationProperty Name="Message" Relationship="EntityModel.AdministratorMessage" FromRole="Administrator" ToRole="Message" />
+          <NavigationProperty Name="DeviceMessage" Relationship="EntityModel.AdministratorDeviceMessage" FromRole="Administrator" ToRole="DeviceMessage" />
+        </EntityType>
+        <EnumType Name="Male">
+          <Member Name="Male" />
+          <Member Name="Female" />
+        </EnumType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="DeviceCode" />
+          </Key>
+          <Property Name="DeviceCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Function" Type="EntityModel.DeviceFunction" Nullable="false" />
+          <Property Name="OwnerCode" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Patient" Relationship="EntityModel.PatientDevice" FromRole="Device" ToRole="Patient" />
+          <NavigationProperty Name="DeviceMessage" Relationship="EntityModel.DeviceMessageDevice" FromRole="Device" ToRole="DeviceMessage" />
+        </EntityType>
+        <EnumType Name="DeviceFunction" >
+          <Member Name="Glucometer" />
+          <Member Name="HeartRateMonitor" />
+          <Member Name="BloodPressureMonitor" />
+        </EnumType>
+        <EntityType Name="HealthStatus">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Status" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatingTime" Type="DateTime" Nullable="false" />
+          <Property Name="OwnerCode" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Patient" Relationship="EntityModel.PatientHealthStatus" FromRole="HealthStatus" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="MeasuredData">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="DeviceCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="Number" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatingTime" Type="DateTime" Nullable="false" />
+          <Property Name="OwnerCode" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Patient" Relationship="EntityModel.PatientMeasuredData" FromRole="MeasuredData" ToRole="Patient" />
+          <Property Name="Value" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="PatientDevice">
+          <End Type="EntityModel.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="EntityModel.Device" Role="Device" Multiplicity="*" />
+        </Association>
+        <Association Name="DoctorPatient">
+          <End Type="EntityModel.Doctor" Role="Doctor" Multiplicity="*" />
+          <End Type="EntityModel.Patient" Role="Patient" Multiplicity="*" />
+        </Association>
+        <EntityType Name="DoctorMessage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="SenderCode" Type="Int32" Nullable="false" />
+          <Property Name="RecipientCode" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Administrator" Relationship="EntityModel.AdministratorMessage" FromRole="Message" ToRole="Administrator" />
+          <NavigationProperty Name="Doctor" Relationship="EntityModel.DoctorDoctorMessage" FromRole="DoctorMessage" ToRole="Doctor" />
+          <Property Name="Checked" Type="Boolean" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="PatientHealthStatus">
+          <End Type="EntityModel.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="EntityModel.HealthStatus" Role="HealthStatus" Multiplicity="*" />
+        </Association>
+        <Association Name="PatientMeasuredData">
+          <End Type="EntityModel.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="EntityModel.MeasuredData" Role="MeasuredData" Multiplicity="*" />
+        </Association>
+        <EnumType Name="DoctorPost">
+          <Member Name="Cardiologist" />
+          <Member Name="Endocrinologist" />
+          <Member Name="Physician" />
+        </EnumType>
+        <EnumType Name="DoctorPolyclinic">
+          <Member Name="State" />
+          <Member Name="Private" />
+        </EnumType>
+        <EntityType Name="DeviceMessage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="SenderCode" Type="Int32" Nullable="false" />
+          <Property Name="RecipientCode" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Administrator" Relationship="EntityModel.AdministratorDeviceMessage" FromRole="DeviceMessage" ToRole="Administrator" />
+          <NavigationProperty Name="Device" Relationship="EntityModel.DeviceMessageDevice" FromRole="DeviceMessage" ToRole="Device" />
+          <Property Name="Checked" Type="Boolean" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="AdministratorMessage">
+          <End Type="EntityModel.Administrator" Role="Administrator" Multiplicity="1" />
+          <End Type="EntityModel.DoctorMessage" Role="Message" Multiplicity="*" />
+        </Association>
+        <Association Name="AdministratorDeviceMessage">
+          <End Type="EntityModel.Administrator" Role="Administrator" Multiplicity="1" />
+          <End Type="EntityModel.DeviceMessage" Role="DeviceMessage" Multiplicity="*" />
+        </Association>
+        <Association Name="DeviceMessageDevice">
+          <End Type="EntityModel.DeviceMessage" Role="DeviceMessage" Multiplicity="*" />
+          <End Type="EntityModel.Device" Role="Device" Multiplicity="1" />
+        </Association>
+        <Association Name="DoctorDoctorMessage">
+          <End Type="EntityModel.Doctor" Role="Doctor" Multiplicity="1" />
+          <End Type="EntityModel.DoctorMessage" Role="DoctorMessage" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntityModelStoreContainer" CdmEntityContainer="EntityModelContainer">
+    <EntitySetMapping Name="DeviceSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Device)">
+        <MappingFragment StoreEntitySet="DeviceSet">
+          <ScalarProperty Name="DeviceCode" ColumnName="DeviceCode" />
+          <ScalarProperty Name="Function" ColumnName="Function" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoctorMessageSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.DoctorMessage)">
+        <MappingFragment StoreEntitySet="DoctorMessageSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="SenderCode" ColumnName="SenderCode" />
+          <ScalarProperty Name="RecipientCode" ColumnName="RecipientCode" />
+          <ScalarProperty Name="Checked" ColumnName="Checked" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoctorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Doctor)">
+        <MappingFragment StoreEntitySet="DoctorSet">
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Polyclinic" ColumnName="Polyclinic" />
+          <ScalarProperty Name="Post" ColumnName="Post" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Patient)">
+        <MappingFragment StoreEntitySet="PatientSet">
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Male" ColumnName="Male" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdministratorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Administrator)">
+        <MappingFragment StoreEntitySet="AdministratorSet">
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MeasuredDataSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.MeasuredData)">
+        <MappingFragment StoreEntitySet="MeasuredDataSet">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="DeviceCode" ColumnName="DeviceCode" />
+          <ScalarProperty Name="CreatingTime" ColumnName="CreatingTime" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HealthStatusSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.HealthStatus)">
+        <MappingFragment StoreEntitySet="HealthStatusSet">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatingTime" ColumnName="CreatingTime" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceMessageSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.DeviceMessage)">
+        <MappingFragment StoreEntitySet="DeviceMessageSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="SenderCode" ColumnName="SenderCode" />
+          <ScalarProperty Name="RecipientCode" ColumnName="RecipientCode" />
+          <ScalarProperty Name="Checked" ColumnName="Checked" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="PatientDevice" TypeName="EntityModel.PatientDevice" StoreEntitySet="DeviceSet">
+      <EndProperty Name="Patient">
+        <ScalarProperty Name="UserCode" ColumnName="Patient_UserCode" />
+      </EndProperty>
+      <EndProperty Name="Device">
+        <ScalarProperty Name="DeviceCode" ColumnName="DeviceCode" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DoctorPatient" TypeName="EntityModel.DoctorPatient" StoreEntitySet="DoctorPatient">
+      <EndProperty Name="Doctor">
+        <ScalarProperty Name="UserCode" ColumnName="Doctor_UserCode" />
+      </EndProperty>
+      <EndProperty Name="Patient">
+        <ScalarProperty Name="UserCode" ColumnName="Patient_UserCode" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PatientHealthStatus" TypeName="EntityModel.PatientHealthStatus" StoreEntitySet="HealthStatusSet">
+      <EndProperty Name="Patient">
+        <ScalarProperty Name="UserCode" ColumnName="Patient_UserCode" />
+      </EndProperty>
+      <EndProperty Name="HealthStatus">
+        <ScalarProperty Name="Number" ColumnName="Number" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PatientMeasuredData" TypeName="EntityModel.PatientMeasuredData" StoreEntitySet="MeasuredDataSet">
+      <EndProperty Name="Patient">
+        <ScalarProperty Name="UserCode" ColumnName="Patient_UserCode" />
+      </EndProperty>
+      <EndProperty Name="MeasuredData">
+        <ScalarProperty Name="Number" ColumnName="Number" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AdministratorMessage" TypeName="EntityModel.AdministratorMessage" StoreEntitySet="DoctorMessageSet">
+      <EndProperty Name="Administrator">
+        <ScalarProperty Name="UserCode" ColumnName="Administrator_UserCode" />
+      </EndProperty>
+      <EndProperty Name="Message">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AdministratorDeviceMessage" TypeName="EntityModel.AdministratorDeviceMessage" StoreEntitySet="DeviceMessageSet">
+      <EndProperty Name="Administrator">
+        <ScalarProperty Name="UserCode" ColumnName="Administrator_UserCode" />
+      </EndProperty>
+      <EndProperty Name="DeviceMessage">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DeviceMessageDevice" TypeName="EntityModel.DeviceMessageDevice" StoreEntitySet="DeviceMessageSet">
+      <EndProperty Name="Device">
+        <ScalarProperty Name="DeviceCode" ColumnName="Device_DeviceCode" />
+      </EndProperty>
+      <EndProperty Name="DeviceMessage">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DoctorDoctorMessage" TypeName="EntityModel.DoctorDoctorMessage" StoreEntitySet="DoctorMessageSet">
+      <EndProperty Name="Doctor">
+        <ScalarProperty Name="UserCode" ColumnName="Doctor_UserCode" />
+      </EndProperty>
+      <EndProperty Name="DoctorMessage">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ExitPatient.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ExitPatient.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ExitPatient.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light, 10pt, style=Bold</value>
+  </data>
+  <data name="ExitPatient.Location" type="System.Drawing.Point, System.Drawing">
+    <value>509, 9</value>
+  </data>
+  <data name="ExitPatient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 36</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ExitPatient.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ExitPatient.Text" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="&gt;&gt;ExitPatient.Name" xml:space="preserve">
+    <value>ExitPatient</value>
+  </data>
+  <data name="&gt;&gt;ExitPatient.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExitPatient.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;ExitPatient.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PatientName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PatientName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light, 14.25pt, style=Bold</value>
+  </data>
+  <data name="PatientName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 14</value>
+  </data>
+  <data name="PatientName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="PatientName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="PatientName.Text" xml:space="preserve">
+    <value>Полное имя пациента</value>
+  </data>
+  <data name="PatientName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;PatientName.Name" xml:space="preserve">
+    <value>PatientName</value>
+  </data>
+  <data name="&gt;&gt;PatientName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PatientName.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;PatientName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, -3</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>574, 53</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="GenerateReport.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="GenerateReport.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9pt, style=Bold</value>
+  </data>
+  <data name="GenerateReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 22</value>
+  </data>
+  <data name="GenerateReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 28</value>
+  </data>
+  <data name="GenerateReport.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="GenerateReport.Text" xml:space="preserve">
+    <value>Сгенерировать отчет</value>
+  </data>
+  <data name="&gt;&gt;GenerateReport.Name" xml:space="preserve">
+    <value>GenerateReport</value>
+  </data>
+  <data name="&gt;&gt;GenerateReport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GenerateReport.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;GenerateReport.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ChooseDevice.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9.749999pt</value>
+  </data>
+  <data name="ChooseDevice.Items" xml:space="preserve">
+    <value>Глюкометр</value>
+  </data>
+  <data name="ChooseDevice.Items1" xml:space="preserve">
+    <value>Пульсометр</value>
+  </data>
+  <data name="ChooseDevice.Items2" xml:space="preserve">
+    <value>Тонометр</value>
+  </data>
+  <data name="ChooseDevice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 69</value>
+  </data>
+  <data name="ChooseDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 23</value>
+  </data>
+  <data name="ChooseDevice.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;ChooseDevice.Name" xml:space="preserve">
+    <value>ChooseDevice</value>
+  </data>
+  <data name="&gt;&gt;ChooseDevice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ChooseDevice.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;ChooseDevice.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ParticularDeviceData.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ParticularDeviceData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9.749999pt</value>
+  </data>
+  <data name="ParticularDeviceData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 44</value>
+  </data>
+  <data name="ParticularDeviceData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 19</value>
+  </data>
+  <data name="ParticularDeviceData.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ParticularDeviceData.Text" xml:space="preserve">
+    <value>Выбрать прибор</value>
+  </data>
+  <data name="&gt;&gt;ParticularDeviceData.Name" xml:space="preserve">
+    <value>ParticularDeviceData</value>
+  </data>
+  <data name="&gt;&gt;ParticularDeviceData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ParticularDeviceData.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;ParticularDeviceData.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="AllDevicesData.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AllDevicesData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9.749999pt</value>
+  </data>
+  <data name="AllDevicesData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="AllDevicesData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 19</value>
+  </data>
+  <data name="AllDevicesData.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="AllDevicesData.Text" xml:space="preserve">
+    <value>Наблюдения всех приборов</value>
+  </data>
+  <data name="&gt;&gt;AllDevicesData.Name" xml:space="preserve">
+    <value>AllDevicesData</value>
+  </data>
+  <data name="&gt;&gt;AllDevicesData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AllDevicesData.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;AllDevicesData.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiCond, 9.749999pt, style=Bold</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 285</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 104</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Приборы</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="UpdateMedicalResults.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="UpdateMedicalResults.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9pt, style=Bold</value>
+  </data>
+  <data name="UpdateMedicalResults.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 22</value>
+  </data>
+  <data name="UpdateMedicalResults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 28</value>
+  </data>
+  <data name="UpdateMedicalResults.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="UpdateMedicalResults.Text" xml:space="preserve">
+    <value>Обновить таблицу</value>
+  </data>
+  <data name="&gt;&gt;UpdateMedicalResults.Name" xml:space="preserve">
+    <value>UpdateMedicalResults</value>
+  </data>
+  <data name="&gt;&gt;UpdateMedicalResults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UpdateMedicalResults.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;UpdateMedicalResults.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ParticularPeriodData.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ParticularPeriodData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9.749999pt</value>
+  </data>
+  <data name="ParticularPeriodData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 44</value>
+  </data>
+  <data name="ParticularPeriodData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 19</value>
+  </data>
+  <data name="ParticularPeriodData.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ParticularPeriodData.Text" xml:space="preserve">
+    <value>За промежуток времени:</value>
+  </data>
+  <data name="&gt;&gt;ParticularPeriodData.Name" xml:space="preserve">
+    <value>ParticularPeriodData</value>
+  </data>
+  <data name="&gt;&gt;ParticularPeriodData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ParticularPeriodData.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;ParticularPeriodData.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AllPeriodData.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AllPeriodData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9.749999pt</value>
+  </data>
+  <data name="AllPeriodData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="AllPeriodData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 19</value>
+  </data>
+  <data name="AllPeriodData.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="AllPeriodData.Text" xml:space="preserve">
+    <value>За весь период</value>
+  </data>
+  <data name="&gt;&gt;AllPeriodData.Name" xml:space="preserve">
+    <value>AllPeriodData</value>
+  </data>
+  <data name="&gt;&gt;AllPeriodData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AllPeriodData.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;AllPeriodData.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="EndPeriod.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="EndPeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 37</value>
+  </data>
+  <data name="EndPeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 23</value>
+  </data>
+  <data name="EndPeriod.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;EndPeriod.Name" xml:space="preserve">
+    <value>EndPeriod</value>
+  </data>
+  <data name="&gt;&gt;EndPeriod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EndPeriod.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;EndPeriod.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BeginPeriod.CustomFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BeginPeriod.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="BeginPeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 8</value>
+  </data>
+  <data name="BeginPeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 23</value>
+  </data>
+  <data name="BeginPeriod.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;BeginPeriod.Name" xml:space="preserve">
+    <value>BeginPeriod</value>
+  </data>
+  <data name="&gt;&gt;BeginPeriod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BeginPeriod.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;BeginPeriod.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9.749999pt</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 43</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 15</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>По</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9.749999pt</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 14</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>С</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 69</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 70</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiCond, 9.749999pt, style=Bold</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 134</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 145</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Период наблюдения</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ShowMeasuredData.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ShowMeasuredData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9.749999pt</value>
+  </data>
+  <data name="ShowMeasuredData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 47</value>
+  </data>
+  <data name="ShowMeasuredData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 19</value>
+  </data>
+  <data name="ShowMeasuredData.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ShowMeasuredData.Text" xml:space="preserve">
+    <value>Измерения приборов</value>
+  </data>
+  <data name="&gt;&gt;ShowMeasuredData.Name" xml:space="preserve">
+    <value>ShowMeasuredData</value>
+  </data>
+  <data name="&gt;&gt;ShowMeasuredData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ShowMeasuredData.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;ShowMeasuredData.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ShowHealthState.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ShowHealthState.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9.749999pt</value>
+  </data>
+  <data name="ShowHealthState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="ShowHealthState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 19</value>
+  </data>
+  <data name="ShowHealthState.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ShowHealthState.Text" xml:space="preserve">
+    <value>Записи о состоянии здоровья</value>
+  </data>
+  <data name="&gt;&gt;ShowHealthState.Name" xml:space="preserve">
+    <value>ShowHealthState</value>
+  </data>
+  <data name="&gt;&gt;ShowHealthState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ShowHealthState.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;ShowHealthState.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiCond, 9.749999pt, style=Bold</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 54</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 74</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Типы наблюдений</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="ResultsOptions.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="Change.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="Change.Text" xml:space="preserve">
+    <value>Изменить запись</value>
+  </data>
+  <data name="Delete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="Delete.Text" xml:space="preserve">
+    <value>Удалить запись</value>
+  </data>
+  <data name="ResultsOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 48</value>
+  </data>
+  <data name="&gt;&gt;ResultsOptions.Name" xml:space="preserve">
+    <value>ResultsOptions</value>
+  </data>
+  <data name="&gt;&gt;ResultsOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MedicalResults.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="MedicalResults.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="MedicalResults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>323, 203</value>
+  </data>
+  <data name="MedicalResults.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;MedicalResults.Name" xml:space="preserve">
+    <value>MedicalResults</value>
+  </data>
+  <data name="&gt;&gt;MedicalResults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MedicalResults.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;MedicalResults.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiCond, 9.749999pt, style=Bold</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>236, 54</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 225</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Результаты наблюдений</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="AddHealthStatus.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="AddHealthStatus.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiExt, 9pt, style=Bold</value>
+  </data>
+  <data name="AddHealthStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 64</value>
+  </data>
+  <data name="AddHealthStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 28</value>
+  </data>
+  <data name="AddHealthStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="AddHealthStatus.Text" xml:space="preserve">
+    <value>Добавить состояние здоровья</value>
+  </data>
+  <data name="&gt;&gt;AddHealthStatus.Name" xml:space="preserve">
+    <value>AddHealthStatus</value>
+  </data>
+  <data name="&gt;&gt;AddHealthStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddHealthStatus.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;AddHealthStatus.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Myriad Pro Light SemiCond, 9.749999pt, style=Bold</value>
+  </data>
+  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>236, 285</value>
+  </data>
+  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 104</value>
+  </data>
+  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Действия над данными</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>570, 393</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Система учета физической активности</value>
+  </data>
+  <data name="&gt;&gt;Change.Name" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="&gt;&gt;Change.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Delete.Name" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;Delete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PatientForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
